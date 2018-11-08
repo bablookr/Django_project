@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update attendence</title>
+</head>
+<body>
+    <form action="/attendance" class="login" method='POST'>
+            {% csrf_token %}
+        <input type="hidden" value="{{classid}}" name="classid">
+        <input type="hidden" value="{{course_id}}" name="courseid">
+        <input type="hidden" value="{{semester}}" name="semester">
+        <h1><font color="#36387C">Update attendance</font></h1>
+        <table border="1">
+        <tr><td>Roll</td>
+            <td>Attendance</td>
+        </tr>
+        {% for stud in studs %}
+        <tr><td>{{stud}}</td><td><input type="text" name="stud{{forloop.counter}}" required='required'></td></tr>
+        {% endfor %}
+        </table>
+		<input type="submit" value="Submit" class="login-submit">
+    </form>
+</body>
+</html>

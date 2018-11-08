@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banaras Hindu University, Faculty of  Arts, Department of English, Varanasi</title>
+</head>
+<body>
+<div class="main_container">
+
+    <h1 align="center">
+        <font  color="#36387C">
+        Department of English
+        </font>
+    </h1>
+    <h4 align="center">
+        <font  color="#36387C">
+            Banaras Hindu University
+        </font>
+    </h4>
+
+<div id="templatemo_top_panel_wrapper_outter">
+<div id="templatemo_top_panel_wrapper_inner">
+	<div id="templatemo_top_panel">
+
+
+        <div id="templatemo_banner">
+
+	        <div id="site_title">
+
+			</div>
+
+        </div>
+
+
+    <div id="templatemo_menu">
+
+<div class="jquerycssmenu">
+    <table width="1282" valign="top" border="1" align="left"
+cellpadding="0" cellspacing="0" bordercolor="#D6D6D6">
+<tr><td>
+    <div id="container">
+
+    <header>
+
+	<div class="clear"></div>
+
+    </header>
+
+
+    <div id="intro">
+
+		<div class="width">
+
+			<div class="intro-content">
+
+                    <h2> {{stud_name}} </h2>
+
+                    Gender: {{gender}}<br>
+                    Email: {{email}}<br>
+                    <br><br>
+
+                    <img src="image.jpg" alt="image">
+
+                    <br><br>
+                    <b> Courses enrolled</b><br>
+                    {% for c in courses %}
+                        <a href="/showcourse/{{c}}">{{c}}</a><br>
+                    {% endfor %}
+
+            	</div>
+
+            </div>
+
+
+	</div>
+	<div>
+        <br><br><a href="stud_profile_update.html">Update profile</a><br>
+    </div>
+
+        <form action="/signout" class="login" method='POST'>
+        {% csrf_token %}
+        <input type="hidden" name="fac_name" value="{{fac_name}}"><br>
+		<input type="submit" value="Logout" class="login-submit">
+    </form>
+
+</div>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

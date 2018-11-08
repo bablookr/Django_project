@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notices</title>
+</head>
+<body>
+{%for notice in notices %}
+{%for column in notice %}
+{{column}}<br>
+{% endfor %}
+<br><br>
+{% endfor %}
+</body>
+</html>

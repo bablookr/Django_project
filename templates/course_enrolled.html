@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+<div id="container">
+
+    <header>
+
+	<h1>
+        {{cname}}
+    </h1>
+        Course id : {{id}}
+    </header>
+
+    <h2>See your attendance and marks</h2>
+
+	<form action="/show" class="login" method='POST'>
+        {% csrf_token %}
+        <input type="hidden" name="courseid" value="{{id}}"><br>
+        <input type="text" name="classid" class="login-input" placeholder="Classid"  required='required'><br>
+         <input type="text" name="semester" class="login-input" placeholder="Semester"  required='required'><br><br>
+		<input type="submit" value="Show attendance and marks." class="login-submit">
+    </form>
+
+</div>
+</body>
+</html>

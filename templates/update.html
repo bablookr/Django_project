@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+<div id="container">
+
+    <div>
+
+		<div class="width">
+
+			<div class="intro-content">
+
+                    <h2>Update attendance or marks</h2>
+
+
+            	</div>
+
+            </div>
+
+
+	</div>
+	<form action="/update" class="login" method='POST'>
+        {% csrf_token %}
+        <select name="opt" class='dropdown' style='width:174px'>
+            <option value="Attendance">Attendance</option>
+            <option value="Marks">Marks</option>
+        </select><br><br>
+        <input type="text" name="classid" class="login-input" placeholder="Class Id" ><br>
+        <input type="text" name="courseid" class="login-input" placeholder="Course Id" ><br>
+         <input type="text" name="semester" class="login-input" placeholder="Semester"><br>
+        <br>
+		<input type="submit" value="Submit" class="login-submit">
+    </form>
+
+
+</div>
+</body>
+</html>
